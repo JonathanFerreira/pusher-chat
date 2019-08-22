@@ -1,24 +1,37 @@
-# README
+# Dependencies
+* [Ruby](https://www.ruby-lang.org/en/downloads/)
+* [Rails](https://guides.rubyonrails.org/index.html)
+* [Postgresql](https://www.postgresql.org/)
+* [Pusher account](https://dashboard.pusher.com/accounts/sign_up)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Setup
 
-Things you may want to cover:
+## Figaro
+Run
+```
+figaro install
+```
+Then put your pusher app keys in **config/application.yml**
 
-* Ruby version
+Ex:
+```
+PUSHER_APP_ID: 'xxx'
+PUSHER_KEY: 'xxxxxxxxxxxxxxxx'
+PUSHER_SECRET: 'xxxxxxxxxxxxx'
+PUSHER_CLUSTER: 'xxx'
+```
 
-* System dependencies
+## Database
 
-* Configuration
+```
+rails db:setup
+```
 
-* Database creation
+# Getting started
 
-* Database initialization
+Start rails server
+```
+rails s
+```
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Then open your [browser](localhost:3000)
